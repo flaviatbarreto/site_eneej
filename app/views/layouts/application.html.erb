@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if !flash.empty? %>
+	<% flash.each do |value,key| %>
+		<div id="<%= value %>"><%= key %></div>
+	<% end %>
+<% end %>
+
 <%= yield %>
 
 </body>
