@@ -1,4 +1,8 @@
 SiteEneej::Application.routes.draw do
+	match '/home', :to => 'pages#home'
+	match '/history', :to => 'pages#history'
+
+	root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
