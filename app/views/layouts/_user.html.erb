@@ -1,0 +1,9 @@
+<% if session[:user_id] %>
+	<% user = User.find(session[:user_id]) %>
+	<%= link_to user.name, user %>
+	<%= link_to "Logout", logout_path %>
+<% else %>
+	<%= link_to "Login" ,new_session_path %>
+<% end %>
+
+<br />

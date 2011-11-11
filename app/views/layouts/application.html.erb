@@ -8,11 +8,16 @@
 </head>
 <body>
 
+<%= render "layouts/menu" %>
+
+<%= render "layouts/user"%>
+
 <% if !flash.empty? %>
 	<% flash.each do |value,key| %>
 		<div id="<%= value %>"><%= key %></div>
 	<% end %>
 <% end %>
+
 
 <%= yield %>
 
