@@ -1,0 +1,62 @@
+*{
+	margin: 0 auto;
+	padding: 
+}
+
+#all{
+	min-height: 100%;
+	width: 900px;
+}
+
+body{
+	font-family: lucida grande, verdana, geneva, sans-serif;
+	font-size: 12px;
+	background-color: #ffe;
+}
+
+p,ul,li,td{
+	color: #000;
+}
+
+h1,th{
+	color: #f60;
+}
+
+h2,h3,h4,h5{
+	color: #380;
+}
+
+a{
+	text-decoration: none;
+	color: #b3b3b3;
+}
+
+#logo{
+	height: 120px;
+}
+
+#menu{
+	height: 70px;
+	background-image: url(../images/menu.png);
+}
+
+#menu a{
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#menu a:hover{
+	color: #f60;
+}
+
+#links{
+	padding-top: 20px;
+	padding-left: 40px;
+}
+
+#main{
+	width: 850px;
+	margin-top: 30px;
+	overflow:auto;
+}

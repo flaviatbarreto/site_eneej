@@ -8,18 +8,28 @@
 </head>
 <body>
 
-<%= render "layouts/menu" %>
+<div id="all">
 
-<%= render "layouts/user"%>
+	<div id="logo">
+	</div>
+	<div id="menu">
+		<div id="links">
+			<%= render "layouts/menu" %>
 
-<% if !flash.empty? %>
-	<% flash.each do |value,key| %>
-		<div id="<%= value %>"><%= key %></div>
-	<% end %>
-<% end %>
+			<%= render "layouts/user"%>
+		</div>
+	</div>
+
+	<div id="main">
+		<% if !flash.empty? %>
+			<% flash.each do |value,key| %>
+				<div id="<%= value %>"><%= key %></div>
+			<% end %>
+		<% end %>
 
 
-<%= yield %>
-
+	<%= yield %>
+	</div>
+<div>
 </body>
 </html>
