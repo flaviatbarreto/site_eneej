@@ -3,6 +3,7 @@
 	<%= link_to user.name, user %>
 	<%= link_to "Logout", logout_path %>
 <% else %>
+	<%= link_to "Sign Up", signup_path %>
 	<%= link_to "Login" ,new_session_path %>
 <% end %>
 

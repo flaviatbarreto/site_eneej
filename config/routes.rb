@@ -5,7 +5,7 @@ SiteEneej::Application.routes.draw do
    resources :users
 	
 	match '/logout', :to => 'sessions#destroy'
-	
+	match '/signup', :to => 'users#new'
 	match '/about', :to=> 'pages#about'
 	match '/contact', :to=> 'pages#contact'
 	match '/home', :to => 'pages#home'
