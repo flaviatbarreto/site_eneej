@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  user: 
+  start_date: 2011-11-25
+  end_date: 2011-11-25
+  address: MyString
+  city: MyString
+  max_subscribers: 1
+
+two:
+  name: MyString
+  user: 
+  start_date: 2011-11-25
+  end_date: 2011-11-25
+  address: MyString
+  city: MyString
+  max_subscribers: 1

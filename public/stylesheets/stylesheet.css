@@ -56,7 +56,12 @@ a{
 }
 
 #main{
-	width: 850px;
+	width: 100%;
 	margin-top: 30px;
+	margin-left: 20px;
 	overflow:auto;
+}
+
+#action a{
+	color: #f60;
 }

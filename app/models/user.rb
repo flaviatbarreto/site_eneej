@@ -1,9 +1,13 @@
 class User < ActiveRecord::Base
+	
+	has_many :events, :dependet => :destroy
+	
 	attr_accessor :password
+	attr_accessible :email, :name, :password, :password_confirmation
 	
 	validates :email, :uniqueness => true
 	validates :name, :presence => true
-	validates :password, :presence => true
+	validates :password, :presence => true, :confirmation => true
 	
 	before_save :encrypt_password
 	

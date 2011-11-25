@@ -1,3 +1,9 @@
+<% if @user.errors.any? %>
+	<% for message in @user.errors.full_messages %>
+		<%= message %>
+	<% end %>
+<% end%>
+
 <%= form_for @user do |f| %>
 
 	<p>
@@ -13,6 +19,11 @@
 	<p>
 		<%= f.label :password %>
 		<%= f.password_field :password %>
+	</p>
+	
+	<p>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
 	</p>
 	
 	<p>

@@ -6,11 +6,21 @@
 	<tr>
 		<td><%= user.name %></td>
 		<td><%= user.email %></td>
-		<td><%= link_to "Ver" , user %></td>
-		<td><%= link_to "Editar", edit_user_path(user) %></td>
-		<td><%= link_to "Remover", user , :method => :delete , :confirm => "Tem certeza?" %></td>
+		<div id="action">
+			<td><%= link_to "Ver" , user %></td>
+			<% if current_user.admin? %>
+				<td><%= link_to "Remover", user , :method => :delete , :confirm => "Tem certeza?" %></td>
+			<% end %>
+			<td>
+				<% if current_user?(user) || current_user.admin? %>
+					<%= link_to "Editar", edit_user_path(user) %>
+				<% end %>
+			</td>
+		</div>
 	</tr>
 <% end %>
 </table>
 <br/>
-<%= link_to "Novo usuario" , new_user_path %>
+<% if current_user.admin? %>
+	<%= link_to "Novo usuario" , new_user_path %>
+<% end %>
